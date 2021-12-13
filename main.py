@@ -18,10 +18,6 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import PolynomialFeatures
 
-# label list
-month_list = ['jan', 'feb', 'mar', 'apr', 'may',
-              'jun', 'jul', 'aug', 'sep', 'okt', 'nov', 'des']
-
 # Masukan data ke masing masing dataframe
 data_2014 = './jumlah-wisatawan-tahun-2014.csv'
 data_2015 = './jumlah-wisatawan-tahun-2015.csv'
@@ -251,4 +247,4 @@ def update_graph(tabelYear_manca, tabelYear_nusan, input_month, input_year,):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=True, host='0.0.0.0')
